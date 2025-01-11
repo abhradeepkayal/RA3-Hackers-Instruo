@@ -1,4 +1,3 @@
-
 const bmiForm = document.getElementById('bmi-form');
 const bmiResult = document.getElementById('bmi-result');
 
