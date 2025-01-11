@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RA³ Hackers - Mental Wellness</title>
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- React and ReactDOM -->
+    <script src="https://unpkg.com/react/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone/babel.min.js"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <h1>RA³ Hackers</h1>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container">
+            <h2>Welcome to Mental Wellness Tracker</h2>
+            <p>Your ultimate companion for holistic mental health and self-care</p>
+            <a href="#features" class="cta-button">Explore Features</a>
+        </div>
+    </header>
+
+    <!-- Authentication Box Section -->
+    <section id="auth" class="auth">
+        <div class="container">
+            <div class="tabs">
+                <button id="signup-tab" class="active">Sign Up</button>
+                <button id="login-tab">Login</button>
+            </div>
+
+            <form id="signup-form" class="auth-form">
+                <h3>Sign Up</h3>
+                <label for="signup-name">Name:</label>
+                <input type="text" id="signup-name" name="signup-name" placeholder="Enter your name" required>
+
+                <label for="signup-email">Email:</label>
+                <input type="email" id="signup-email" name="signup-email" placeholder="Enter your email" required>
+
+                <label for="signup-password">Password:</label>
+                <input type="password" id="signup-password" name="signup-password" placeholder="Enter your password" required>
+
+                <button type="submit" class="cta-button">Sign Up</button>
+            </form>
+
+            <form id="login-form" class="auth-form hidden">
+                <h3>Login</h3>
+                <label for="login-email">Email:</label>
+                <input type="email" id="login-email" name="login-email" placeholder="Enter your email" required>
+
+                <label for="login-password">Password:</label>
+                <input type="password" id="login-password" name="login-password" placeholder="Enter your password" required>
+
+                <button type="submit" class="cta-button">Login</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h3>Our Features</h3>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h4>BMI Calculator</h4>
+                    <p>Get insights into your physical health with our easy-to-use BMI tool.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>Journaling</h4>
+                    <p>Declutter your mind and track your thoughts in a secure space.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>Daily Tracker</h4>
+                    <p>Monitor sleep, eating habits, and physical activities to maintain balance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 RA³ Hackers. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Link to JavaScript -->
+    <script src="script.js" type="text/babel"></script>
+</body>
+</html>
