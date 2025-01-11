@@ -1,10 +1,13 @@
+// script.js
+
+// BMI Calculator
 const bmiForm = document.getElementById('bmi-form');
 const bmiResult = document.getElementById('bmi-result');
 
 bmiForm.addEventListener('submit', function(event) {
     event.preventDefault();
 
-    const height = parseFloat(document.getElementById('height').value) / 100; 
+    const height = parseFloat(document.getElementById('height').value) / 100; // Convert cm to meters
     const weight = parseFloat(document.getElementById('weight').value);
 
     if (isNaN(height) || isNaN(weight)) {
@@ -28,7 +31,7 @@ bmiForm.addEventListener('submit', function(event) {
     bmiResult.textContent = `Your BMI is ${bmi} - ${category}`;
 });
 
-
+// Daily Tracker
 const trackerForm = document.getElementById('tracker-form');
 
 trackerForm.addEventListener('submit', function(event) {
