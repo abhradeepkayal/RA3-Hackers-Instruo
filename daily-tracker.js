@@ -1,39 +1,86 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const trackerForm = document.getElementById("daily-form");
-    const junkFoodSelect = document.getElementById("junk-food");
-    const waterInput = document.getElementById("water-intake");
-    const mealsInput = document.getElementById("meals");
-    const stepsInput = document.getElementById("steps-walked");
-    const sportsInput = document.getElementById("sports-time");
-    const gymInput = document.getElementById("gym-time");
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('daily-form');
+    const feedbackSection = document.getElementById('feedback');
+    const feedbackMessage = document.getElementById('feedback-message');
 
-    // Check if there's stored daily tracker data
-    const storedTracker = JSON.parse(localStorage.getItem("dailyTracker"));
-    if (storedTracker) {
-        // Fill the form with stored values
-        junkFoodSelect.value = storedTracker.junkFood;
-        waterInput.value = storedTracker.waterIntake;
-        mealsInput.value = storedTracker.meals;
-        stepsInput.value = storedTracker.stepsWalked;
-        sportsInput.value = storedTracker.sportsTime || "";
-        gymInput.value = storedTracker.gymTime || "";
+    
+    const lastSubmissionDate = localStorage.getItem('lastSubmissionDate');
+    const currentDate = new Date().toLocaleDateString();
+
+    
+    if (lastSubmissionDate === currentDate) {
+        alert('You have already submitted your Daily Tracker today.');
+        return; 
     }
 
-    trackerForm.addEventListener("submit", function (e) {
-        e.preventDefault();
+    
+    form.addEventListener('submit', (event) => {
+        event.preventDefault(); 
+        
+        const junkFood = document.getElementById('junk-food').value;
+        const waterIntake = document.getElementById('water-intake').value;
+        const meals = document.getElementById('meals').value;
+        const stepsWalked = document.getElementById('steps-walked').value;
+        const sportsTime = document.getElementById('sports-time').value || 0; 
+        const gymTime = document.getElementById('gym-time').value || 0; 
 
-        const dailyData = {
-            junkFood: junkFoodSelect.value,
-            waterIntake: waterInput.value,
-            meals: mealsInput.value,
-            stepsWalked: stepsInput.value,
-            sportsTime: sportsInput.value,
-            gymTime: gymInput.value
-        };
+        
+        let score = 0;
 
-        // Store the daily tracker data in localStorage
-        localStorage.setItem("dailyTracker", JSON.stringify(dailyData));
+        
+        if (junkFood === 'yes') {
+            score -= 10;
+        }
 
-        alert("Your daily tracker data has been saved!");
+       
+        if (waterIntake >= 2) {
+            score += 10;
+        } else if (waterIntake >= 1) {
+            score += 5;
+        }
+
+        
+        if (meals > 5) {
+            score -= 5;
+        }
+
+        
+        if (stepsWalked >= 10000) {
+            score += 15;
+        } else if (stepsWalked >= 5000) {
+            score += 10;
+        } else if (stepsWalked >= 2000) {
+            score += 5;
+        }
+
+        
+        if (sportsTime > 0) {
+            score += sportsTime / 10; 
+        } else {
+            score -= 5; 
+        }
+
+       
+        if (gymTime > 0) {
+            score += gymTime / 5;
+        }
+
+       
+        let feedback = '';
+
+        if (score >= 30) {
+            feedback = 'Great job! Keep up the good work.';
+        } else if (score >= 10) {
+            feedback = 'Good effort, but there is room for improvement.';
+        } else {
+            feedback = 'Try to focus on improving your habits for better results.';
+        }
+
+        
+        feedbackSection.classList.remove('hidden');
+        feedbackMessage.textContent = feedback;
+
+       
+        localStorage.setItem('lastSubmissionDate', currentDate);
     });
 });
