@@ -1,4 +1,4 @@
-/* Basic Styles */
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -61,7 +61,7 @@ footer {
     margin-top: 3rem;
 }
 
-/* Journaling Page Styles */
+
 #journaling {
     max-width: 800px;
     margin: 2rem auto;
