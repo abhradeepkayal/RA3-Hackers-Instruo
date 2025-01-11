@@ -1,5 +1,3 @@
-<!-- selfcare.html -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,38 +7,62 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Navigation Bar -->
     <nav class="navbar">
-        <h1>Mental Health Tracker</h1>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="bmi.html">BMI</a></li>
-            <li><a href="journaling.html">Journaling</a></li>
-            <li><a href="daily-tracker.html">Daily Tracker</a></li>
-            <li><a href="mental-tips.html">Mental Health Tips</a></li>
-            <li><a href="selfcare.html">Self-Care</a></li>
-            <li><a href="resources.html">Resources</a></li>
-            <li><a href="activities.html">Activities</a></li>
-            <li><a href="cbtquiz.html">CBT Quiz</a></li>
-        </ul>
+        <div class="container">
+            <h1>MINDORA</h1>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="bmi.html">BMI Calculator</a></li>
+                <li><a href="journaling.html">Journaling Tool</a></li>
+                <li><a href="selfcare.html">Self-Care Routines</a></li>
+                <li><a href="resources.html">Mental Health Resources</a></li>
+                <li><a href="cbtquiz.html">CBT Quiz</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="activities.html">Activities</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+            </ul>
+        </div>
     </nav>
 
-    <section id="selfcare">
-        <h1>Self-Care Routine</h1>
-        <form id="selfcare-form">
-            <label for="selfcare-entry">Enter your self-care routine:</label>
-            <textarea id="selfcare-entry" name="selfcare-entry" rows="4" required></textarea>
-            <button type="submit">Save Routine</button>
-        </form>
-
-        <div id="selfcare-output">
-            <!-- Saved routine will be displayed here -->
+    <!-- Self-Care Routines Section -->
+    <section id="self-care-routines">
+        <div class="container">
+            <h2>Self-Care Routines</h2>
+            <p>Self-care is essential for maintaining your mental and emotional well-being. Here are some routines you can incorporate into your daily life to feel more balanced and grounded:</p>
+            <div class="self-care-list">
+                <div class="routine">
+                    <h3>Daily Movement</h3>
+                    <p>Incorporate light physical activity into your day, such as stretching, walking, or yoga. Movement can boost mood and reduce stress.</p>
+                </div>
+                <div class="routine">
+                    <h3>Mindfulness or Meditation</h3>
+                    <p>Even just 5 minutes of mindfulness or meditation can help calm the mind. Focus on your breath, observe your thoughts without judgment, and ground yourself in the present moment.</p>
+                </div>
+                <div class="routine">
+                    <h3>Healthy Sleep Hygiene</h3>
+                    <p>Prioritize sleep by maintaining a consistent routine. Create a relaxing bedtime environment—dim the lights, turn off screens, and try calming activities (like reading or listening to soft music) before bed.</p>
+                </div>
+                <div class="routine">
+                    <h3>Nourish Your Body</h3>
+                    <p>Eating a balanced diet can improve mental clarity and energy levels. Opt for nourishing foods like fruits, vegetables, whole grains, and lean proteins. Avoid too much caffeine or processed sugar, as they can affect mood.</p>
+                </div>
+                <div class="routine">
+                    <h3>Creative Expression</h3>
+                    <p>Journaling, drawing, writing, or any form of creative expression can be a powerful way to release emotions and process thoughts.</p>
+                </div>
+                <div class="routine">
+                    <h3>Connection with Nature</h3>
+                    <p>Spending time outdoors, even if it's just a short walk in a park, can help improve mental health. Nature has a calming effect and can promote relaxation.</p>
+                </div>
+            </div>
         </div>
     </section>
 
+    <!-- Footer -->
     <footer>
         <p>&copy; 2025 Mental Health Tracker</p>
     </footer>
-
-    <script src="selfcare.js"></script>
 </body>
 </html>

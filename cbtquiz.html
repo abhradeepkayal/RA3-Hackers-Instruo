@@ -7,47 +7,74 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
     <nav class="navbar">
-        <h1>Mental Health Tracker</h1>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="bmi.html">BMI</a></li>
-            <li><a href="journaling.html">Journaling</a></li>
-            <li><a href="daily-tracker.html">Daily Tracker</a></li>
-            <li><a href="mental-tips.html">Mental Health Tips</a></li>
-            <li><a href="selfcare.html">Self-Care</a></li>
-            <li><a href="resources.html">Resources</a></li>
-            <li><a href="activities.html">Activities</a></li>
-            <li><a href="cbtquiz.html">CBT Quiz</a></li>
-        </ul>
+        <div class="container">
+            <h1>MINDORA</h1>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="bmi.html">BMI Calculator</a></li>
+                <li><a href="journaling.html">Journaling Tool</a></li>
+                <li><a href="selfcare.html">Self-Care Routines</a></li>
+                <li><a href="resources.html">Mental Health Resources</a></li>
+                <li><a href="cbtquiz.html">CBT Quiz</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="activities.html">Activities</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+            </ul>
+        </div>
     </nav>
 
-    <!-- CBT Quiz Content -->
-    <div class="cbt-quiz">
-        <h2>CBT Quiz</h2>
-        <form id="cbtQuizForm">
-            <label for="question1">How often do you feel anxious?</label><br>
-            <input type="radio" id="q1a" name="question1" value="Often">
-            <label for="q1a">Often</label><br>
-            <input type="radio" id="q1b" name="question1" value="Sometimes">
-            <label for="q1b">Sometimes</label><br>
-            <input type="radio" id="q1c" name="question1" value="Rarely">
-            <label for="q1c">Rarely</label><br>
+    <section id="cbt-quiz">
+        <h1>CBT Quiz</h1>
+        <form id="cbt-quiz-form">
+            <p>Answer the following questions honestly based on your feelings over the last week. Select an option from "Strongly Agree" to "Strongly Disagree".</p>
 
-            <label for="question2">Do you experience negative thoughts often?</label><br>
-            <input type="radio" id="q2a" name="question2" value="Yes">
-            <label for="q2a">Yes</label><br>
-            <input type="radio" id="q2b" name="question2" value="No">
-            <label for="q2b">No</label><br>
+            <div class="question">
+                <label>1. I often find myself overthinking situations unnecessarily.</label>
+                <select name="q1" required>
+                    <option value="5">Strongly Agree</option>
+                    <option value="4">Agree</option>
+                    <option value="3">Neutral</option>
+                    <option value="2">Disagree</option>
+                    <option value="1">Strongly Disagree</option>
+                </select>
+            </div>
+            <div class="question">
+                <label>2. I feel like my negative thoughts spiral out of control.</label>
+                <select name="q2" required>
+                    <option value="5">Strongly Agree</option>
+                    <option value="4">Agree</option>
+                    <option value="3">Neutral</option>
+                    <option value="2">Disagree</option>
+                    <option value="1">Strongly Disagree</option>
+                </select>
+            </div>
+            <div class="question">
+                <label>3. I believe my worries interfere with my daily life.</label>
+                <select name="q3" required>
+                    <option value="5">Strongly Agree</option>
+                    <option value="4">Agree</option>
+                    <option value="3">Neutral</option>
+                    <option value="2">Disagree</option>
+                    <option value="1">Strongly Disagree</option>
+                </select>
+            </div>
+            <!-- Add the rest of the questions -->
+            <div id="extra-questions"></div>
 
             <button type="submit">Submit</button>
         </form>
+        <div id="cbt-feedback" class="hidden">
+            <h2>Your Results</h2>
+            <p id="cbt-result"></p>
+        </div>
+    </section>
 
-        <div id="quizResult"></div>
-    </div>
+    <footer>
+        <p>&copy; 2025 Mental Health Tracker</p>
+    </footer>
 
-    <script src="cbtquiz.js"></script> <!-- Reference to CBT Quiz JS file -->
-
+    <script src="cbtquiz.js"></script>
 </body>
 </html>
