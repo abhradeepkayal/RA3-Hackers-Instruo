@@ -7,30 +7,53 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
     <nav class="navbar">
-        <h1>Mental Health Tracker</h1>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="bmi.html">BMI</a></li>
-            <li><a href="journaling.html">Journaling</a></li>
-            <li><a href="daily-tracker.html">Daily Tracker</a></li>
-            <li><a href="mental-tips.html">Mental Health Tips</a></li>
-            <li><a href="selfcare.html">Self-Care</a></li>
-            <li><a href="resources.html">Resources</a></li>
-            <li><a href="activities.html">Activities</a></li>
-            <li><a href="cbtquiz.html">CBT Quiz</a></li>
-        </ul>
+        <div class="container">
+            <h1>Mental Health Tracker</h1>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="bmi.html">BMI Calculator</a></li>
+                <li><a href="journaling.html">Journaling Tool</a></li>
+                <li><a href="selfcare.html">Self-Care Routines</a></li>
+                <li><a href="resources.html">Mental Health Resources</a></li>
+                <li><a href="cbtquiz.html">CBT Quiz</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="activities.html">Activities</a></li>
+            </ul>
+        </div>
     </nav>
-    <!-- Journaling Tool Content -->
-    <div class="journaling">
-        <h2>Journal Your Thoughts</h2>
-        <textarea id="journalEntry" placeholder="Write your thoughts here..."></textarea>
-        <button id="saveJournal">Save Entry</button>
-        <div id="savedJournal"></div>
-    </div>
 
-    <script src="journaling.js"></script> <!-- Reference to Journaling JS file -->
+    <section id="journaling">
+        <h1>Journaling Tool</h1>
 
+        <form id="journaling-form">
+            <label for="journal-date">Select Date:</label>
+            <input type="date" id="journal-date" name="journal-date" required>
+
+            <label for="feeling">How are you feeling today?</label>
+            <select id="feeling" name="feeling">
+                <option value="happy">Happy</option>
+                <option value="sad">Sad</option>
+                <option value="stressed">Stressed</option>
+                <option value="angry">Angry</option>
+                <option value="calm">Calm</option>
+                <option value="anxious">Anxious</option>
+            </select>
+
+            <label for="journal-entry">Write your journal entry:</label>
+            <textarea id="journal-entry" name="journal-entry" rows="5" required></textarea>
+
+            <button type="submit">Save Journal</button>
+        </form>
+
+        <div id="saved-journal">
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Mental Health Tracker</p>
+    </footer>
+
+    <script src="journaling.js"></script>
 </body>
 </html>
