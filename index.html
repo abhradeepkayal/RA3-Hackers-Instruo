@@ -3,95 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RA³ Hackers - Mental Wellness</title>
-    
+    <title>Mental Health Tracker</title>
     <link rel="stylesheet" href="styles.css">
-    
-    <script src="https://unpkg.com/react/umd/react.development.js" crossorigin></script>
-    <script src="https://unpkg.com/react-dom/umd/react-dom.development.js" crossorigin></script>
-    <script src="https://unpkg.com/babel-standalone/babel.min.js"></script>
 </head>
 <body>
-    
-    <nav class="navbar">
-        <div class="container">
-            <h1>RA³ Hackers</h1>
+    <header>
+        <nav>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="bmi.html">BMI Calculator</a></li>
+                <li><a href="daily-tracker.html">Daily Tracker</a></li>
+                <li><a href="mental-tips.html">Mental Health Tips</a></li>
+                <li><a href="journaling.html">Journaling Tool</a></li> 
             </ul>
-        </div>
-    </nav>
-
-    <header class="hero">
-        <div class="container">
-            <h2>Welcome to Mental Wellness Tracker</h2>
-            <p>Your ultimate companion for holistic mental health and self-care</p>
-            <a href="#features" class="cta-button">Explore Features</a>
-        </div>
+        </nav>
     </header>
 
-    <section id="auth" class="auth">
-        <div class="container">
-            <div class="tabs">
-                <button id="signup-tab" class="active">Sign Up</button>
-                <button id="login-tab">Login</button>
+    <section id="home">
+        <h1>Welcome to Mental Health Tracker</h1>
+        <p>Click on the icons below to explore the features:</p>
+
+        <div class="features">
+            <div class="feature">
+                <a href="bmi.html">
+                    <img src="images/bmi-icon.png" alt="BMI Icon" width="64" height="64">
+                    <p>BMI Calculator</p>
+                </a>
             </div>
-
-            <form id="signup-form" class="auth-form">
-                <h3>Sign Up</h3>
-                <label for="signup-name">Name:</label>
-                <input type="text" id="signup-name" name="signup-name" placeholder="Enter your name" required>
-
-                <label for="signup-email">Email:</label>
-                <input type="email" id="signup-email" name="signup-email" placeholder="Enter your email" required>
-
-                <label for="signup-password">Password:</label>
-                <input type="password" id="signup-password" name="signup-password" placeholder="Enter your password" required>
-
-                <button type="submit" class="cta-button">Sign Up</button>
-            </form>
-
-            <form id="login-form" class="auth-form hidden">
-                <h3>Login</h3>
-                <label for="login-email">Email:</label>
-                <input type="email" id="login-email" name="login-email" placeholder="Enter your email" required>
-
-                <label for="login-password">Password:</label>
-                <input type="password" id="login-password" name="login-password" placeholder="Enter your password" required>
-
-                <button type="submit" class="cta-button">Login</button>
-            </form>
-        </div>
-    </section>
-
-    <section id="features" class="features">
-        <div class="container">
-            <h3>Our Features</h3>
-            <div class="feature-grid">
-                <div class="feature-card">
-                    <h4>BMI Calculator</h4>
-                    <p>Get insights into your physical health with our easy-to-use BMI tool.</p>
-                </div>
-                <div class="feature-card">
-                    <h4>Journaling</h4>
-                    <p>Declutter your mind and track your thoughts in a secure space.</p>
-                </div>
-                <div class="feature-card">
-                    <h4>Daily Tracker</h4>
-                    <p>Monitor sleep, eating habits, and physical activities to maintain balance.</p>
-                </div>
+            <div class="feature">
+                <a href="daily-tracker.html">
+                    <img src="images/daily-tracker-icon.png" alt="Daily Tracker Icon" width="64" height="64">
+                    <p>Daily Tracker</p>
+                </a>
+            </div>
+            <div class="feature">
+                <a href="mental-tips.html">
+                    <img src="images/mental-tips-icon.png" alt="Mental Tips Icon" width="64" height="64">
+                    <p>Mental Health Tips</p>
+                </a>
+            </div>
+            <div class="feature">
+                <a href="journaling.html">
+                    <img src="images/journaling-icon.png" alt="Journaling Icon" width="64" height="64">
+                    <p>Journaling Tool</p>
+                </a>
             </div>
         </div>
     </section>
-
-    
-    <footer class="footer">
-        <p>&copy; 2025 RA³ Hackers. All Rights Reserved.</p>
+    <footer>
+        <p>&copy; 2025 Mental Health Tracker</p>
     </footer>
-
-    <script src="script.js" type="text/babel"></script>
 </body>
 </html>
