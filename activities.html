@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Journaling Tool</title>
+    <title>Activities</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -22,15 +22,21 @@
             <li><a href="cbtquiz.html">CBT Quiz</a></li>
         </ul>
     </nav>
-    <!-- Journaling Tool Content -->
-    <div class="journaling">
-        <h2>Journal Your Thoughts</h2>
-        <textarea id="journalEntry" placeholder="Write your thoughts here..."></textarea>
-        <button id="saveJournal">Save Entry</button>
-        <div id="savedJournal"></div>
+
+    <!-- Activities Content -->
+    <div class="activities">
+        <h2>Activities</h2>
+        <button id="pomodoroTimer">Start Pomodoro Timer</button>
+        <button id="breathingExercises">Breathing Exercises</button>
+        <div id="ytMusicLink">
+            <a href="https://www.youtube.com/watch?v=RxHcVAy6eVo" target="_blank">Listen to Calming Music</a>
+        </div>
+        <div id="calmingVideos">
+            <a href="https://www.youtube.com/watch?v=0wP06Vkh8hM" target="_blank">Watch Calming Videos</a>
+        </div>
     </div>
 
-    <script src="journaling.js"></script> <!-- Reference to Journaling JS file -->
+    <script src="activities.js"></script> <!-- Reference to Activities JS file -->
 
 </body>
 </html>

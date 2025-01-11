@@ -1,13 +1,14 @@
+<!-- selfcare.html -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Journaling Tool</title>
+    <title>Self-Care Routines</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
     <nav class="navbar">
         <h1>Mental Health Tracker</h1>
         <ul>
@@ -22,15 +23,24 @@
             <li><a href="cbtquiz.html">CBT Quiz</a></li>
         </ul>
     </nav>
-    <!-- Journaling Tool Content -->
-    <div class="journaling">
-        <h2>Journal Your Thoughts</h2>
-        <textarea id="journalEntry" placeholder="Write your thoughts here..."></textarea>
-        <button id="saveJournal">Save Entry</button>
-        <div id="savedJournal"></div>
-    </div>
 
-    <script src="journaling.js"></script> <!-- Reference to Journaling JS file -->
+    <section id="selfcare">
+        <h1>Self-Care Routine</h1>
+        <form id="selfcare-form">
+            <label for="selfcare-entry">Enter your self-care routine:</label>
+            <textarea id="selfcare-entry" name="selfcare-entry" rows="4" required></textarea>
+            <button type="submit">Save Routine</button>
+        </form>
 
+        <div id="selfcare-output">
+            <!-- Saved routine will be displayed here -->
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Mental Health Tracker</p>
+    </footer>
+
+    <script src="selfcare.js"></script>
 </body>
 </html>
