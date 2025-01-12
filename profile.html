@@ -17,26 +17,32 @@
                 <li><a href="selfcare.html">Self-Care Routines</a></li>
                 <li><a href="resources.html">Mental Health Resources</a></li>
                 <li><a href="cbtquiz.html">CBT Quiz</a></li>
-                <li><a href="community.html">Community</a></li>
                 <li><a href="activities.html">Activities</a></li>
                 <li><a href="profile.html">Profile</a></li>
                 <li><a href="aboutus.html">About Us</a></li>
             </ul>
         </div>
     </nav>
+    <section id="profile">
+        <h2>Your Profile</h2>
+        <p><strong>Name:</strong> <span id="userName"></span></p>
+        <p><strong>Email:</strong> <span id="userEmail"></span></p>
+    </section>
 
     <section id="profile">
         <h1>Your Profile</h1>
 
-        <div id="badges" class="badges">
-            <!-- Display badges here -->
-        </div>
+        <div id="badges" class="badges"></div>
     </section>
 
     <footer>
         <p>&copy; 2025 Mental Health Tracker</p>
     </footer>
+    <script>
+        
+        document.getElementById("userName").textContent = localStorage.getItem("userName");
+        document.getElementById("userEmail").textContent = localStorage.getItem("userEmail");
+    </script>
 
-    <script src="profile.js"></script> <!-- Linking Profile JS -->
-</body>
+    <script src="profile.js"></script> 
 </html>
