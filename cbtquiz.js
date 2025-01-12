@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const resultMessage = document.getElementById('cbt-result');
     const extraQuestions = document.getElementById('extra-questions');
 
-    // Dynamically add 12 more questions
+    
     for (let i = 4; i <= 15; i++) {
         const questionDiv = document.createElement('div');
         questionDiv.classList.add('question');
@@ -21,17 +21,17 @@ document.addEventListener('DOMContentLoaded', () => {
         extraQuestions.appendChild(questionDiv);
     }
 
-    // Handle form submission
+    
     form.addEventListener('submit', (event) => {
         event.preventDefault();
 
-        // Get all answers
+        
         const answers = Array.from(form.querySelectorAll('select')).map((select) => parseInt(select.value, 10));
 
-        // Calculate total score
+        
         const totalScore = answers.reduce((sum, value) => sum + value, 0);
 
-        // Provide feedback based on score
+        
         let feedback = '';
 
         if (totalScore <= 30) {
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
             `;
         }
 
-        // Display feedback
+        
         feedbackSection.classList.remove('hidden');
         resultMessage.textContent = feedback;
     });
