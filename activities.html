@@ -7,10 +7,10 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
+    <!-- Navigation Bar -->
     <nav class="navbar">
         <div class="container">
-            <h1>MINDORA</h1>
+            <h1 style="text-align: center ;">MINDORA<br><span style="font-style:italic; font-size:small"> Mental Health Tracker</span></h1>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="bmi.html">BMI Calculator</a></li>
@@ -18,6 +18,7 @@
                 <li><a href="selfcare.html">Self-Care Routines</a></li>
                 <li><a href="resources.html">Mental Health Resources</a></li>
                 <li><a href="cbtquiz.html">CBT Quiz</a></li>
+                
                 <li><a href="activities.html">Activities</a></li>
                 <li><a href="profile.html">Profile</a></li>
                 <li><a href="aboutus.html">About Us</a></li>
@@ -25,12 +26,12 @@
         </div>
     </nav>
 
-    
+    <!-- Pomodoro Timer Section -->
     <section id="pomodoro">
-        <h2>Pomodoro Timer</h2>
+        <h2  class="scr" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color:aliceblue; text-decoration: wavy;">Pomodoro Timer</h2>
         <button id="start-pomodoro">Start Pomodoro</button>
-        <div id="pomodoro-time">25:00</div>
-        
+        <div id="pomodoro-time" style="color:white;">25:00</div>
+        <!-- Pomodoro Sound and Alarm Sound -->
         <audio id="pomodoro-sound" loop>
             <source src="assets/soothing-music.mp3" type="audio/mpeg">
         </audio>
@@ -40,15 +41,18 @@
         <div id="motivational-quote"></div>
     </section>
 
-    
+<img src="breathe.jpeg" alert="error" height="200px" width="300px" style="display: block;
+position:realtive; left:11cm;">
+
+    <!-- Breathing Exercise Section -->
     <section id="breathing-exercise">
-        <h2>Breathing Exercise</h2>
+        <h2 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color:aliceblue">Breathing Exercise</h2>
         <button id="start-breathing">Start Breathing Exercise</button>
         <div id="breathing-instruction"></div>
     </section>
 
     <footer>
-        <p>&copy; 2025 Mental Health Tracker</p>
+        <p>&copy; Made with ❤️ by RA³ Hackers, IIEST SHIBPUR</p>
     </footer>
 
     <script src="activities.js"></script>
