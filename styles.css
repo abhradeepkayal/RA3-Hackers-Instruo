@@ -16,11 +16,13 @@ left:5cm;}
     font-weight: 400;
     font-style: normal;
     font-size: xx-large;
+    color:#333
   }
   .slabo-27px-regular {
     font-family: "Slabo 27px", serif;
     font-weight: 400;
     font-style: normal;
+    color:#333
   }
 form {
     max-width: 600px;
@@ -111,7 +113,7 @@ text-decoration: none;}
 
 .sub{ display: block;
     position: relative;
-    bottom:1cm;
+    bottom:7cm;
     left:4cm;}
     .scr{ text-align: center;}
 body {
@@ -667,3 +669,6 @@ right:3cm}
         opacity: 0;
     }
 }
+box1{ display:block;
+
+bottom: 15cm;}
