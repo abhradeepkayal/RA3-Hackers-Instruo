@@ -9,7 +9,9 @@
 <body>
     <nav class="navbar">
         <div class="container">
-            <h1>MINDORA</h1>
+            <h1 style="text-align: center ;">MINDORA <br><span style="font-style:italic; font-size:small"> Mental Health Tracker</span></h1><marquee style="font-family: Book Antiqua; color: #FFFFFF; background-color: rgb(234, 161, 234); color: black;
+            direction=right";>Heal the mind, let peace unwind.</marquee>
+           
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="bmi.html">BMI Calculator</a></li>
@@ -17,32 +19,26 @@
                 <li><a href="selfcare.html">Self-Care Routines</a></li>
                 <li><a href="resources.html">Mental Health Resources</a></li>
                 <li><a href="cbtquiz.html">CBT Quiz</a></li>
+                
                 <li><a href="activities.html">Activities</a></li>
                 <li><a href="profile.html">Profile</a></li>
                 <li><a href="aboutus.html">About Us</a></li>
             </ul>
         </div>
     </nav>
-    <section id="profile">
-        <h2>Your Profile</h2>
-        <p><strong>Name:</strong> <span id="userName"></span></p>
-        <p><strong>Email:</strong> <span id="userEmail"></span></p>
-    </section>
 
     <section id="profile">
-        <h1>Your Badges</h1>
+        <h1>Your Profile</h1>
 
-        <div id="badges" class="badges"></div>
+        <div id="badges" class="badges">
+            <!-- Display badges here -->
+        </div>
     </section>
 
     <footer>
-        <p>&copy; 2025 Mental Health Tracker</p>
+        <p>&copy;Made with ❤️ by RA³ Hackers, IIEST SHIBPUR</p>
     </footer>
-    <script>
-        
-        document.getElementById("userName").textContent = localStorage.getItem("userName");
-        document.getElementById("userEmail").textContent = localStorage.getItem("userEmail");
-    </script>
 
-    <script src="profile.js"></script> 
+    <script src="profile.js"></script> <!-- Linking Profile JS -->
+</body>
 </html>
