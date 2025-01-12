@@ -2,15 +2,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const signInPopup = document.getElementById("sign-in-popup");
     const signInForm = document.getElementById("sign-in-form");
 
-    // Retrieve user details from localStorage
     const userName = localStorage.getItem("userName");
     const userEmail = localStorage.getItem("userEmail");
 
     if (!userName || !userEmail) {
-        // Show sign-in popup if user is not signed in
+        
         signInPopup.style.display = "flex";
     } else {
-        // Update UI with signed-in user's info
         updateSignedInUI(userName);
     }
 
@@ -26,7 +24,6 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
 
-        // Store user info in localStorage
         localStorage.setItem("userName", name);
         localStorage.setItem("userEmail", email);
 
