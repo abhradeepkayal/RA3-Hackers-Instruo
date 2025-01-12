@@ -1,59 +1,199 @@
 /* General Styles */
+
+img{ border-radius:20%;
+display:block;
+position:relative;
+right:2cm;}
+bmi{ display: block;
+position:relative;
+left:5cm;}
+.box{
+    display:flex;
+
+}
+.pacifico-regular {
+    font-family: "Pacifico", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: xx-large;
+  }
+  .slabo-27px-regular {
+    font-family: "Slabo 27px", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+form {
+    max-width: 600px;
+    margin: 2rem auto;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+form label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+form input,
+form select,
+form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+}
+
+form button {
+    width: 100%;
+    padding: 1rem;
+    background-color: #1d4ed8;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #2563eb;
+}
+@media screen and (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .brain{ display:block;
+        top:50px;
+        left:50px;
+    }
+
+    .features {
+        padding:5px 5px
+    }
+  h4{ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    ;
+text-decoration: none;}
+}
+.tool-page {
+    padding: 3rem 1rem;
+    background-color: #fff;
+    text-align: center;
+}
+
+.tool-page h3 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.tool-page p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.tool-page .back-button {
+    display: inline-block;
+    padding: 0.7rem 1.5rem;
+    background-color: #1d4ed8;
+    color: white;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    font-size: 1.1rem;
+    margin-top: 2rem;
+}
+
+.tool-page .back-button:hover {
+    background-color: #2563eb;
+}
+
+.sub{ display: block;
+    position: relative;
+    bottom:1cm;
+    left:4cm;}
+    .scr{ text-align: center;}
 body {
     font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f9;
+    margin: 30px 30px;
+    padding: 30px 30px;
+    background-color: #030335;
     color: #333;
 }
-
-.container {
-    width: 90%;
-    max-width: 1200px;
+.container{
+    
+    width: 60%;
+    max-width: 1000px;
     margin: 0 auto;
+    align-self: center;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+
+    .routine{ border:4px solid black;}
+
+}
+.journal{ display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 20%;
+       
+        object-position:10px;;
+      }
+h2{ font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
-h1, h2, h3, h4 {
-    color: #333;
-}
+
+
+
 
 /* Navbar */
 .navbar {
-    background-color: #5f6368;
-    padding: 15px 0;
+    background-color: #1d4ed8;
     color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
 
 .navbar h1 {
-    font-size: 24px;
-    margin-left: 20px;
+    margin: 0;
+    font-size: 1.8rem;
 }
 
 .navbar ul {
     list-style: none;
-    padding: 0;
-    margin: 0;
     display: flex;
-    justify-content: flex-start;
+    gap: 1.5rem;
 }
 
-.navbar ul li {
-    margin-right: 20px;
-}
-
-.navbar ul li a {
+.navbar a {
     color: white;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
 }
 
-.navbar ul li a:hover {
-    text-decoration: underline;
+.navbar a:hover {
+    color: #fbbf24;
 }
-
 /* Hero Section */
 .hero {
-    background-color: #006400;
+    background-image: linear-gradient(rgb(236, 248, 162), rgb(245, 164, 228));
     color: white;
     padding: 40px 0;
     text-align: center;
@@ -96,6 +236,60 @@ h1, h2, h3, h4 {
 .tool-card:hover {
     transform: scale(1.05);
 }
+
+.bmi-calculator {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    margin
+}
+
+
+
+.bmi-result {
+    
+    font-weight: 
+    margin-top: 2rem;
+}
+#bmi-form{ background-color: #f3f5f7;
+text-align: center;
+text-shadow: #4e5052;
+padding: 15px}
+.journaling{display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    margin }
+.journaling-form{ background-color: white;
+    text-align: center;
+    text-shadow: #4e5052;
+    padding: 15px;}
+.journaling-tool textarea {
+    width: 100%;
+    height: 200px;
+    padding: 1rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    border: 1px solid #ccc;
+}
+
+.journaling-tool button {
+    margin-top: 1rem;
+    width: 100%;
+    padding: 1rem;
+    background-color: #1d4ed8;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.journaling-tool button:hover {
+    background-color: #2563eb;
+}
+
+.self-care
 
 /* Daily Tracker Section */
 #daily-tracker {
@@ -450,4 +644,26 @@ button {
 button:disabled {
     background-color: #D3D3D3;
     cursor: not-allowed;
+}
+.alex-brush-regular {
+    font-family: "Alex Brush", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  
+  .logo{ display:block;
+position:relative;
+
+right:3cm}
+
+.blink {
+    animation: blinker 2s linear infinite;
+    color: rgb(230, 226, 244);
+    font-family: sans-serif;
+}
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
 }
