@@ -1,4 +1,4 @@
-/* Popup container */
+/* General Styles */
 .sign-in-popup {
     position: fixed;
     top: 0;
@@ -52,8 +52,6 @@
 .sign-in-container button:hover {
     background-color: #45a049;
 }
-/* General Styles */
-
 img{ border-radius:20%;
 display:block;
 position:relative;
@@ -63,6 +61,13 @@ position:relative;
 left:5cm;}
 .box{
     display:flex;
+
+}
+.box3{
+    border: 2px solid black;
+    padding: 4px 4px;
+    margin:4px;
+    background-color: #95c0f8;
 
 }
 .pacifico-regular {
@@ -556,6 +561,8 @@ select {
     margin-bottom: 10px;
     background-color: #f9f9f9;
 }
+.resources{ color:black;
+}
 #mental-health-resources {
     padding: 20px;
     background-color: #f9f9f9;
@@ -726,3 +733,21 @@ right:3cm}
 box1{ display:block;
 
 bottom: 15cm;}
+.jersey-15-regular {
+    font-family: "Jersey 15", serif;
+    font-weight: 400;
+    font-style: normal;
+    color:white;
+
+  }
+  .image-container {
+    display: flex;
+    justify-content: center; /* Centers images horizontally */
+    gap: 20px; /* Adds space between images */
+  }
+  .image-container img {
+    width: 300px; /* Set the width of each image */
+    height: auto; /* Maintain aspect ratio */
+    border: 2px solid #ccc; /* Optional: Add a border */
+    border-radius: 10px; /* Optional: Round the corners */
+  }
