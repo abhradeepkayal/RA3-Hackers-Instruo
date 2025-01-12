@@ -5,10 +5,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const journalEntry = document.getElementById("journal-entry");
     const savedJournal = document.getElementById("saved-journal");
 
-    // Load the saved journal entries when the page loads
+    
     loadSavedJournals();
 
-    // Event listener for form submission
+    
     journalingForm.addEventListener("submit", function (e) {
         e.preventDefault();
 
@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-        // Save the journal entry in localStorage
+        
         const journalData = {
             date: date,
             feeling: feeling,
@@ -30,23 +30,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
         saveJournal(date, journalData);
 
-        // Clear the form
+        
         journalDate.value = "";
         feelingSelect.value = "happy";
         journalEntry.value = "";
 
-        // Display the saved journal entry
+        
         displaySavedJournal(journalData);
     });
 
-    // Function to save journal entry to localStorage
+    
     function saveJournal(date, data) {
         let journals = JSON.parse(localStorage.getItem("journals")) || {};
         journals[date] = data;
         localStorage.setItem("journals", JSON.stringify(journals));
     }
 
-    // Function to load saved journals
+    
     function loadSavedJournals() {
         const journals = JSON.parse(localStorage.getItem("journals"));
         if (journals) {
@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // Function to display a saved journal entry
+    
     function displaySavedJournal(data) {
         const journalDiv = document.createElement("div");
         journalDiv.classList.add("journal-entry");
