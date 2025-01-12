@@ -9,20 +9,20 @@ document.addEventListener("DOMContentLoaded", function () {
         e.preventDefault();
 
         const weight = parseFloat(weightInput.value);
-        const height = parseFloat(heightInput.value) / 100; // Convert height to meters
+        const height = parseFloat(heightInput.value) / 100; 
 
         if (isNaN(weight) || isNaN(height) || weight <= 0 || height <= 0) {
             alert("Please enter valid weight and height values.");
             return;
         }
 
-        // Calculate BMI
+       
         const bmi = (weight / (height * height)).toFixed(2);
 
-        // Display BMI result
+        
         bmiResult.innerHTML = `<h3>Your BMI: ${bmi}</h3>`;
 
-        // Provide advice based on BMI value
+        
         let advice = "";
         if (bmi < 18.5) {
             advice = "Your BMI is considered underweight. It's important to eat a balanced diet and consult a healthcare provider for advice.";
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
             advice = "Your BMI is considered obese. It's recommended to consult a healthcare provider for personalized advice on diet and exercise.";
         }
 
-        // Display advice
+        
         adviceOutput.innerHTML = `<p><strong>Health Advice:</strong> ${advice}</p>`;
     });
 });
