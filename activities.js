@@ -1,9 +1,9 @@
-// Pomodoro Timer Logic
-let pomodoroTime = 25 * 60; // 25 minutes in seconds
+
+let pomodoroTime = 25 * 60; 
 let isPomodoroActive = false;
 let pomodoroInterval;
 
-// Motivational Quotes
+
 const quotes = [
     "You are not defined by your struggles. You are defined by your strength to rise, again and again, no matter the storm.",
     "You are stronger than you think, and braver than you believe.",
@@ -13,35 +13,35 @@ const quotes = [
     "Progress is not about perfection but about finding peace in each imperfect step you take."
 ];
 
-// Start Pomodoro Timer
+
 document.getElementById("start-pomodoro").addEventListener("click", startPomodoro);
 
 function startPomodoro() {
     const pomodoroSound = document.getElementById('pomodoro-sound');
     const alarmSound = document.getElementById('alarm-sound');
 
-    // Play soothing music
+   
     pomodoroSound.play();
 
-    // Disable the start button during Pomodoro
+    
     document.getElementById("start-pomodoro").disabled = true;
 
-    // Start the timer interval
+    
     pomodoroInterval = setInterval(function () {
         if (pomodoroTime <= 0) {
-            clearInterval(pomodoroInterval); // Stop timer when it reaches 0
+            clearInterval(pomodoroInterval);
             pomodoroSound.pause();
             pomodoroSound.currentTime = 0;
             alarmSound.play();
             startBreak();
         } else {
-            pomodoroTime--; // Decrease time by one second
+            pomodoroTime--; 
             updatePomodoroTimeDisplay();
         }
-    }, 1000); // Update every second
+    }, 1000); 
 }
 
-// Update Pomodoro Timer Display
+
 function updatePomodoroTimeDisplay() {
     const minutes = Math.floor(pomodoroTime / 60);
     const seconds = pomodoroTime % 60;
@@ -52,25 +52,25 @@ function formatTime(time) {
     return time < 10 ? "0" + time : time;
 }
 
-// Start Break (Motivational Quote + 5-minute break)
+
 function startBreak() {
-    // Stop soothing music and play alarm
+    
     const alarmSound = document.getElementById("alarm-sound");
     alarmSound.play();
 
-    // Show Motivational Quote
+    
     const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
     document.getElementById("motivational-quote").innerHTML = `<h3>Break Time: ${randomQuote}</h3>`;
 
-    // 5-minute break (300 seconds)
+    
     setTimeout(function () {
-        pomodoroTime = 25 * 60; // Reset timer to 25 minutes
+        pomodoroTime = 25 * 60; 
         updatePomodoroTimeDisplay();
-        document.getElementById("start-pomodoro").disabled = false; // Enable the start button again
-    }, 300000); // 5 minutes break
+        document.getElementById("start-pomodoro").disabled = false; 
+    }, 300000); 
 }
 
-// Breathing Exercise Logic
+
 let breathingStep = 0;
 
 document.getElementById("start-breathing").addEventListener("click", startBreathingExercise);
@@ -96,10 +96,10 @@ function holdBreath() {
 function exhale() {
     breathingStep = 0;
     document.getElementById("breathing-instruction").textContent = "Inhale for 4 seconds... (Repeat)";
-    setTimeout(breatheIn, 4000); // Start next cycle
+    setTimeout(breatheIn, 4000); 
 
     if (breathingStep === 3) {
-        breathingStep = 0; // Reset after 4 cycles
+        breathingStep = 0; 
         document.getElementById("breathing-instruction").textContent = "Breathing exercise complete!";
     }
 }
