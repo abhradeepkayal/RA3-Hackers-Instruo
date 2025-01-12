@@ -5,11 +5,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const userName = localStorage.getItem("userName");
     const userEmail = localStorage.getItem("userEmail");
 
-    if (!userName || !userEmail) {
+    const userName = localStorage.getItem("userName");
+    if (userName) {
+        
+        signInPopup.style.display = "none";
+        updateSignedInUI(userName);
+    } else {
         
         signInPopup.style.display = "flex";
-    } else {
-        updateSignedInUI(userName);
     }
 
     signInForm.addEventListener("submit", (e) => {
