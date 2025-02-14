@@ -249,7 +249,7 @@ h2{ font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .navbar a {
-    color: darkmagenta;
+    color: #811331;
     text-decoration: none;
     font-size: 1.1rem;
     font-weight: 500;
@@ -262,7 +262,7 @@ h2{ font-family:Verdana, Geneva, Tahoma, sans-serif;
 
 .hero {
     background-image: linear-gradient(rgb(236, 248, 162), rgb(245, 164, 228));
-    color: white;
+    color: pink;
     padding: 40px 0;
     text-align: center;
 }
