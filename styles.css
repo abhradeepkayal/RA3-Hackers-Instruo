@@ -786,7 +786,7 @@ bottom: 15cm;}
 .chatbot-popup, .community-popup {
     display: none;
     position: fixed;
-    top: 50%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
     background: #ffffff;
@@ -794,7 +794,6 @@ bottom: 15cm;}
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
     padding: 30px;
     width: 600px;
-    height: 200px;
     z-index: 100;
     text-align: center;
     animation: popupFade 0.4s ease;
