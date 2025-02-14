@@ -19,6 +19,16 @@ communityIcon.addEventListener("click", () => {
         chatbotPopup.style.display = "none";
     }
 });
+function toggleChatbot() {
+    const chatbotPopup = document.querySelector('.chatbot-popup');
+    chatbotPopup.classList.toggle('visible');
+}
+
+function toggleCommunity() {
+    const communityPopup = document.querySelector('.community-popup');
+    communityPopup.classList.toggle('visible');
+}
+
 closeButtons.forEach(button => {
     button.addEventListener("click", () => {
         chatbotPopup.style.display = "none";
