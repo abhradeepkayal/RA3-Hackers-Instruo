@@ -249,7 +249,7 @@ h2{ font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .navbar a {
-    color: lightseagreen;
+    color: darkmagenta;
     text-decoration: none;
     font-size: 1.1rem;
     font-weight: 500;
@@ -770,7 +770,7 @@ bottom: 15cm;}
 .icon {
     cursor: pointer;
     background-color: pink;
-    color: white;
+    color: blue;
     padding: 10px 15px;
     border-radius: 5px;
     text-align: center;
@@ -878,6 +878,6 @@ a {
 }
 
 a:hover {
-    color: #0056b3;
+    transform: scale(1.05);
     text-decoration: underline;
 }
